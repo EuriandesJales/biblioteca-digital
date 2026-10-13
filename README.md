@@ -5,20 +5,20 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Academic](https://img.shields.io/badge/Projeto-A3%20Acadêmico-blue)
 
-Sistema de **Biblioteca Virtual** desenvolvido como projeto acadêmico **A3** da disciplina de **Programação e Algoritmos com Java**, aplicando conceitos de programação orientada a objetos, estruturas de dados, persistência de informações e regras de negócio no gerenciamento de uma biblioteca.
+Sistema de **Biblioteca Virtual 100% digital** desenvolvido como projeto acadêmico **A3** da disciplina de **Programação e Algoritmos com Java**, aplicando conceitos de programação orientada a objetos, estruturas de dados, persistência de informações e regras de negócio no gerenciamento de um acervo digital, com leitura protegida dentro da própria plataforma.
 
 ---
 
 ## 📑 Sumário
 
-- [Sobre o projeto](#-sobre-o-projeto)
+- [Visão geral do sistema](#-visão-geral-do-sistema)
 - [Objetivos](#-objetivos)
 - [Funcionalidades](#️-funcionalidades)
+- [Regras de negócio](#-regras-de-negócio)
 - [Sistema de planos](#-sistema-de-planos)
 - [Catálogo de livros](#-catálogo-de-livros)
-- [Sistema de empréstimos](#-sistema-de-empréstimos)
-- [Controle de multas](#-controle-de-multas)
-- [Biblioteca 100% digital](#-biblioteca-100-digital)
+- [Leitura digital protegida](#-leitura-digital-protegida)
+- [Controle de sessões de leitura](#-controle-de-sessões-de-leitura)
 - [Painel administrativo](#️-painel-administrativo)
 - [Banco de dados](#️-banco-de-dados)
 - [Arquitetura](#-arquitetura)
@@ -30,38 +30,39 @@ Sistema de **Biblioteca Virtual** desenvolvido como projeto acadêmico **A3** da
 - [Estrutura do projeto](#-estrutura-prevista-do-projeto)
 - [Como executar](#️-como-executar)
 - [Fluxo de desenvolvimento (Git)](#-git-e-fluxo-de-desenvolvimento)
+- [Próximos passos de desenvolvimento](#-próximos-passos-de-desenvolvimento)
 - [Colaboradores](#-colaboradores)
 - [Status do projeto](#-status-do-projeto)
 - [Licença](#-licença)
 
 ---
 
-## 📖 Sobre o projeto
+## 📖 Visão geral do sistema
 
-A Biblioteca Virtual é um sistema para gerenciamento de livros, usuários, planos de acesso e empréstimos. Usuários podem se cadastrar, contratar um plano de acesso e consultar o acervo disponível; administradores gerenciam o catálogo e a base de usuários.
+A Biblioteca Virtual é um sistema **100% digital** para gerenciamento de livros, usuários, planos de acesso e sessões de leitura. Usuários podem se cadastrar, contratar um plano de acesso, consultar o acervo e **ler as obras diretamente na plataforma**, por meio de um leitor web integrado (Web Viewer). Administradores gerenciam o catálogo, a base de usuários e os planos.
+
 
 O projeto contempla dois perfis de utilização:
 
 | Perfil | Descrição |
 |---|---|
-| 👤 **Usuário** | Consulta o catálogo, contrata planos e realiza empréstimos |
-| 🛠️ **Administrador** | Gerencia livros, usuários, planos e empréstimos |
-
-> A aplicação poderá operar com **empréstimos físicos**, um modelo **100% digital**, ou um modelo híbrido — a definição final depende dos requisitos da equipe.
+| 👤 **Usuário** | Consulta o catálogo, contrata planos e lê livros no leitor integrado |
+| 🛠️ **Administrador** | Gerencia livros, usuários, planos e sessões de leitura |
 
 ---
 
 ## 🎯 Objetivos
 
-**Objetivo geral:** desenvolver um sistema de biblioteca em **Java**, aplicando os conhecimentos da disciplina de Programação e Algoritmos.
+**Objetivo geral:** desenvolver um sistema de biblioteca digital em **Java**, aplicando os conhecimentos da disciplina de Programação e Algoritmos.
 
 **Objetivos específicos:**
 
 - Aplicar programação orientada a objetos na modelagem do sistema;
-- Implementar cadastro de usuários e catálogo de livros;
+- Implementar cadastro de usuários e catálogo de livros digitais;
 - Controlar planos de acesso, sua validade e contratação;
-- Implementar área administrativa e regras de empréstimo;
-- Controlar prazos de devolução e calcular multas por atraso;
+- Implementar um leitor integrado que impeça o download dos arquivos;
+- Controlar sessões de leitura e acessos simultâneos;
+- Implementar área administrativa;
 - Aplicar validações cadastrais e boas práticas de desenvolvimento;
 - Utilizar Git e GitHub em fluxo de trabalho colaborativo.
 
@@ -75,8 +76,50 @@ O projeto contempla dois perfis de utilização:
 - Consultar e pesquisar o catálogo de livros;
 - Visualizar detalhes e disponibilidade de um livro;
 - Escolher, contratar e acompanhar o status/validade de um plano;
-- Consultar empréstimos, prazos de devolução e multas;
-- Acessar conteúdo digital, quando esse modelo for adotado.
+- Ler livros no leitor integrado (Web Viewer);
+- Visualizar e encerrar suas sessões de leitura ativas;
+- Favoritar livros e retomar a leitura de onde parou.
+
+---
+
+## 📜 Regras de negócio
+
+As regras abaixo definem o comportamento esperado do sistema. Cada regra recebe um código (`RN`) para facilitar a rastreabilidade com os requisitos e os testes.
+
+### Acesso e planos
+
+| ID | Regra |
+|---|---|
+| RN01 | Somente usuários autenticados com **plano ativo** podem abrir um livro para leitura. |
+| RN02 | Plano **expirado** bloqueia a abertura de novas leituras; sessões em andamento são encerradas no vencimento. |
+| RN03 | O catálogo (busca e detalhes) pode ser consultado sem plano ativo, mas o conteúdo do livro não. |
+
+### Leitura exclusivamente dentro da plataforma
+
+| ID | Regra |
+|---|---|
+| RN04 | Os livros são lidos **exclusivamente** dentro da plataforma, por meio do leitor web integrado (Web Viewer). |
+| RN05 | É **proibido o download** dos arquivos originais (PDF/ePub). O sistema não oferece botão, link ou rota de download. |
+| RN06 | Os arquivos originais ficam em **armazenamento privado**, fora de qualquer pasta pública do servidor. |
+| RN07 | O conteúdo é entregue ao leitor **por partes** (página ou capítulo) e somente mediante sessão válida. |
+| RN08 | Cada página exibida carrega uma **marca d'água** com a identificação do usuário, para dissuadir a divulgação. |
+
+> ⚠️ **Limite honesto da proteção:** nenhum sistema web consegue impedir 100% capturas de tela ou fotos da tela. O objetivo do DRM neste projeto é **impedir o download do arquivo pela aplicação** e **dificultar/dissuadir a cópia**, não garantir inviolabilidade. 
+
+### Sessões de leitura e acesso simultâneo
+
+| ID | Regra |
+|---|---|
+| RN09 | Toda leitura acontece dentro de uma **sessão de leitura**, com início, última atividade e fim. |
+| RN10 | Cada conta possui um **limite de sessões simultâneas** (valor padrão sugerido: **2**, configurável por plano). |
+| RN11 | Ao atingir o limite, uma nova sessão é **recusada** ou, por escolha do usuário, **substitui a mais antiga**. |
+| RN12 | Sessões sem atividade por determinado tempo (sugestão: **15 minutos**) expiram automaticamente. |
+| RN13 | O leitor envia sinais periódicos de atividade (*heartbeat*) para manter a sessão viva. |
+| RN14 | O administrador pode **consultar e encerrar** sessões de qualquer usuário. |
+
+### Conceitos removidos (modelo físico)
+
+Os itens abaixo **não fazem mais parte** do projeto: empréstimo físico, prazo e data de devolução, controle de estoque de exemplares, cálculo de multa por atraso.
 
 ---
 
@@ -94,7 +137,7 @@ Usuário → Plano → Data de início → Data de vencimento → Plano válido?
                                                               └── Não → Acesso bloqueado
 ```
 
-O acesso a funcionalidades restritas depende do estado atual do plano.
+O acesso a funcionalidades restritas (leitura de livros) depende do estado atual do plano.
 
 ### 💰 Contratação do plano
 
@@ -115,56 +158,70 @@ Durante a contratação, o sistema poderá solicitar dados de validação cadast
 | Categoria | Categoria/gênero |
 | Ano | Ano de publicação |
 | Editora | Editora responsável |
-| Disponibilidade | Disponível ou indisponível |
-| Tipo | Físico ou digital |
+| Arquivo | Referência ao arquivo em armazenamento privado (nunca exposta ao usuário) |
+| Disponibilidade | Publicado (visível para leitura) ou despublicado |
 
-O catálogo permite pesquisa e consulta das obras disponíveis.
-
----
-
-## 📦 Sistema de empréstimos
-
-Para livros físicos, o sistema controla retirada, data do empréstimo, prazo e data de devolução, situação, atrasos e multas.
-
-```text
-Usuário → Seleciona livro → Disponível?
-                               ├── Não → Solicitação recusada
-                               └── Sim → Empréstimo criado → Prazo definido
-                                          → Devolução → Verifica atraso → Multa, se aplicável
-```
+Como o acervo é digital, **não há estoque de exemplares**: um mesmo livro pode ser lido por vários usuários ao mesmo tempo. O catálogo permite pesquisa e consulta das obras disponíveis.
 
 ---
 
-## 💸 Controle de multas
+## 🔒 Leitura digital protegida
 
-Quando há empréstimo físico, o sistema verifica automaticamente se a devolução ocorreu após o prazo:
+O usuário nunca recebe o arquivo do livro. Ele recebe apenas o conteúdo renderizado, parte por parte, enquanto sua sessão for válida.
 
-```text
-diasDeAtraso = dataDevolucao - dataLimite
+```mermaid
+sequenceDiagram
+    actor U as Usuário
+    participant V as Web Viewer
+    participant S as Serviço de Leitura
+    participant A as Armazenamento privado
 
-se diasDeAtraso > 0:
-    multa = diasDeAtraso × valorDiario
+    U->>V: Clica em "Ler"
+    V->>S: Solicita abertura (usuário, livro)
+    S->>S: Plano ativo? Limite de sessões?
+    alt Bloqueado
+        S-->>V: Acesso negado (motivo)
+    else Liberado
+        S->>S: Cria sessão de leitura (token)
+        S-->>V: Token da sessão
+        loop Enquanto estiver lendo
+            V->>S: Pede página N (token)
+            S->>A: Busca página no arquivo
+            A-->>S: Conteúdo da página
+            S-->>V: Página com marca d'água
+            V->>S: Heartbeat (token)
+        end
+        U->>V: Fecha o leitor
+        V->>S: Encerra sessão
+    end
 ```
 
-As regras definitivas de cálculo poderão ser ajustadas conforme os requisitos definidos pela equipe.
+**Medidas de proteção previstas:**
+
+- Sem rota, botão ou link de download de PDF/ePub;
+- Arquivos fora de pastas públicas, acessados apenas pelo servidor;
+- Entrega página a página, com token de sessão de curta duração;
+- Marca d'água com identificação do usuário em cada página;
+- Bloqueio de impressão e de seleção/cópia de texto no leitor (medida de dissuasão).
 
 ---
 
-## 💻 Biblioteca 100% digital
+## 🔁 Controle de sessões de leitura
 
-Como alternativa ao empréstimo físico, o projeto pode adotar um modelo totalmente digital, em que:
+Uma **sessão de leitura** representa o uso de um livro por um usuário em um dispositivo, do momento em que abre o leitor até fechá-lo ou expirar.
 
-- não há devolução física nem logística de entrega;
-- o acesso ao conteúdo depende exclusivamente da validade do plano;
-- não se aplica multa por atraso.
-
-```text
-Usuário → Plano ativo?
-             ├── Não → Acesso negado
-             └── Sim → Livro digital → Acesso permitido
+```mermaid
+stateDiagram-v2
+    [*] --> Ativa: Abre o leitor (plano ativo e dentro do limite)
+    Ativa --> Ativa: Heartbeat recebido
+    Ativa --> Encerrada: Usuário fecha o leitor
+    Ativa --> Expirada: Inatividade acima do limite
+    Ativa --> Encerrada: Plano vencido / encerrada pelo administrador
+    Encerrada --> [*]
+    Expirada --> [*]
 ```
 
-A decisão entre biblioteca física, digital ou híbrida será definida durante a implementação.
+O sistema conta apenas sessões no estado **Ativa** para verificar o limite de acessos simultâneos da conta.
 
 ---
 
@@ -172,20 +229,18 @@ A decisão entre biblioteca física, digital ou híbrida será definida durante 
 
 O administrador gerencia:
 
-- **Livros:** cadastrar, alterar, remover e consultar;
+- **Livros:** cadastrar, alterar, remover, consultar e enviar o arquivo digital;
 - **Usuários:** cadastrar, alterar e consultar;
 - **Planos:** gerenciar, consultar ativos e expirados;
-- **Empréstimos:** gerenciar, consultar devoluções e multas;
-- **Acervo:** gerenciar disponibilidade dos livros.
+- **Sessões de leitura:** consultar sessões ativas e encerrá-las, quando necessário;
+- **Acervo:** publicar e despublicar livros.
 
 ```text
 Administrador → Autenticação → Painel Administrativo
                                     ├── Usuários
                                     ├── Livros
                                     ├── Planos
-                                    ├── Empréstimos
-                                    ├── Devoluções
-                                    └── Multas
+                                    └── Sessões de leitura
 ```
 
 ---
@@ -196,14 +251,24 @@ Estrutura conceitual prevista:
 
 ```text
 USUARIO ──── PLANO
-        └─── EMPRESTIMO ──── LIVRO
+        ├─── PAGAMENTO
+        └─── SESSAO_LEITURA ──── LIVRO
 
 ADMINISTRADOR ──── GERENCIAMENTO
 ```
 
-**Entidades previstas:** `Usuario`, `Administrador`, `Livro`, `Plano`, `Pagamento`, `Emprestimo`, `Multa`.
+**Entidades previstas:** `Usuario`, `Administrador`, `Livro`, `Plano`, `Pagamento`, `SessaoLeitura`.
 
-A estrutura definitiva será refinada durante o desenvolvimento.
+| Entidade | Responsabilidade |
+|---|---|
+| `Usuario` | Dados cadastrais, credenciais (hash de senha) e plano atual |
+| `Administrador` | Perfil com permissões de gerenciamento |
+| `Livro` | Metadados do livro e referência ao arquivo privado |
+| `Plano` | Tipo, duração, valor e limite de sessões simultâneas |
+| `Pagamento` | Registro simulado da contratação |
+| `SessaoLeitura` | Usuário, livro, token, início, última atividade, fim e estado |
+
+> As entidades `Emprestimo` e `Multa` foram **removidas** do modelo. A estrutura definitiva será refinada durante o desenvolvimento.
 
 ---
 
@@ -218,17 +283,17 @@ src/
 │   ├── Administrador.java
 │   ├── Livro.java
 │   ├── Plano.java
-│   ├── Emprestimo.java
-│   └── Multa.java
+│   └── SessaoLeitura.java
 ├── service/
 │   ├── UsuarioService.java
 │   ├── LivroService.java
 │   ├── PlanoService.java
-│   └── EmprestimoService.java
+│   └── LeituraService.java
 ├── repository/
 │   ├── UsuarioRepository.java
 │   ├── LivroRepository.java
-│   └── PlanoRepository.java
+│   ├── PlanoRepository.java
+│   └── SessaoLeituraRepository.java
 └── Main.java
 ```
 
@@ -236,15 +301,20 @@ src/
 
 ## 🔐 Segurança
 
-Mesmo sendo um projeto acadêmico, algumas práticas de segurança serão observadas:
+
 
 - **Dados pessoais:** informações como CPF são tratadas como dados sensíveis e usadas apenas quando necessárias às regras do sistema;
 - **Senhas:** nunca armazenadas em texto puro — o correto é utilizar uma função de hash apropriada;
-- **Pagamentos:** dados completos de cartão não são armazenados pela aplicação.
+- **Pagamentos:** dados completos de cartão não são armazenados pela aplicação;
+- **Conteúdo protegido:** arquivos originais ficam em armazenamento privado e só são lidos pelo servidor, nunca expostos por URL direta;
+- **Tokens de sessão:** de curta duração, vinculados ao usuário e invalidados no encerramento ou expiração da sessão.
 
 ```text
 Correto:   Aplicação → Gateway de pagamento → Processador de pagamento
 Incorreto: Aplicação → Banco de dados → Número completo do cartão
+
+Correto:   Leitor → Serviço de leitura (valida sessão) → Página renderizada
+Incorreto: Leitor → URL pública do PDF → Arquivo completo baixado
 ```
 
 ---
@@ -254,52 +324,35 @@ Incorreto: Aplicação → Banco de dados → Número completo do cartão
 - CPF e CEP em formato válido;
 - Campos obrigatórios preenchidos e e-mail válido;
 - Senha com requisitos mínimos de segurança;
-- Existência de usuário, livro, plano e empréstimo consultados;
+- Existência de usuário, livro e plano consultados;
 - Plano válido ou expirado;
-- Disponibilidade do livro;
-- Devolução dentro ou fora do prazo.
+- Livro publicado e com arquivo digital associado;
+- Sessão de leitura existente, ativa e pertencente ao usuário;
+- Limite de sessões simultâneas respeitado;
+- Token de sessão válido e não expirado.
 
 ---
 
 ## 🔄 Fluxo geral do sistema
 
-```text
-                         ┌───────┐
-                         │ LOGIN │
-                         └───┬───┘
-                 ┌───────────┴───────────┐
-                 ▼                       ▼
-           ┌──────────┐           ┌───────────────┐
-           │ USUÁRIO  │           │ ADMINISTRADOR │
-           └────┬─────┘           └───────┬───────┘
-                ▼                         ▼
-         ┌─────────────┐           ┌──────────────┐
-         │ Plano ativo?│           │ Gerenciar    │
-         └──────┬──────┘           │ sistema      │
-        ┌───────┴───────┐          └──────────────┘
-        ▼               ▼
-      SIM              NÃO
-        │               │
-        ▼               ▼
-  ┌────────────┐   ┌───────────┐
-  │Acesso a    │   │Contratar  │
-  │livros      │   │plano      │
-  └─────┬──────┘   └─────┬─────┘
-        ▼                ▼
-  ┌────────────┐   ┌───────────┐
-  │Empréstimo  │   │Pagamento  │
-  └─────┬──────┘   └───────────┘
-        ▼
-  ┌────────────┐   ┌────────────┐
-  │Devolução   │──▶│Verificar   │
-  └────────────┘   │atraso      │
-                    └──────┬─────┘
-                    ┌──────┴──────┐
-                    ▼             ▼
-                  NÃO            SIM
-                    │             │
-                    ▼             ▼
-                 Concluído   Calcular multa
+```mermaid
+flowchart TD
+    L[LOGIN] --> U[USUÁRIO]
+    L --> A[ADMINISTRADOR]
+
+    A --> G[Gerenciar sistema:<br/>livros, usuários, planos, sessões]
+
+    U --> P{Plano ativo?}
+    P -- Não --> C[Contratar plano]
+    C --> PG[Pagamento]
+    PG --> P
+    P -- Sim --> B[Acesso ao catálogo e aos livros]
+    B --> R[Abrir leitura]
+    R --> S{Dentro do limite<br/>de sessões?}
+    S -- Não --> N[Recusar ou substituir<br/>a sessão mais antiga]
+    S -- Sim --> V[Sessão criada:<br/>leitura no Web Viewer]
+    V --> F[Fechar leitor ou expirar<br/>por inatividade]
+    F --> E[Sessão encerrada]
 ```
 
 ---
@@ -308,10 +361,11 @@ Incorreto: Aplicação → Banco de dados → Número completo do cartão
 
 - **Java**
 - **Git** e **GitHub**
+- **HTML e CSS** (protótipo da interface web em `src/`)
 - **Banco de dados / SQL**, caso utilizado na implementação
 - **IDE compatível com Java**
 
-Tecnologias adicionais poderão ser incluídas conforme a arquitetura definitiva do sistema.
+Tecnologias adicionais poderão ser incluídas conforme a arquitetura definitiva do sistema (por exemplo, uma biblioteca para renderizar páginas de PDF no servidor).
 
 ---
 
@@ -323,16 +377,17 @@ Tecnologias adicionais poderão ser incluídas conforme a arquitetura definitiva
 |---|---|---|
 | RF01 | Cadastro de usuário | O sistema deve permitir o cadastro de novos usuários |
 | RF02 | Autenticação | Usuários autenticados acessam suas funcionalidades |
-| RF03 | Cadastro de livros | O administrador pode cadastrar novos livros |
-| RF04 | Gerenciamento de livros | O administrador pode consultar, alterar e remover livros |
+| RF03 | Cadastro de livros | O administrador pode cadastrar novos livros e enviar o arquivo digital |
+| RF04 | Gerenciamento de livros | O administrador pode consultar, alterar, publicar e remover livros |
 | RF05 | Consulta de livros | O usuário pode consultar o catálogo |
 | RF06 | Gerenciamento de planos | O sistema permite contratação e controle de planos |
 | RF07 | Validação do plano | O sistema verifica a validade antes de operações restritas |
-| RF08 | Empréstimo | O usuário pode solicitar empréstimo de livros físicos (se implementado) |
-| RF09 | Controle de prazo | O sistema registra o prazo de devolução |
-| RF10 | Multa | O sistema identifica atrasos e calcula a multa |
-| RF11 | Área administrativa | Funcionalidades exclusivas para administradores |
-| RF12 | Pagamento | Fluxo de contratação com dados fictícios ou gateway apropriado |
+| RF08 | Leitura integrada | O usuário lê o livro exclusivamente no leitor web da plataforma |
+| RF09 | Bloqueio de download | O sistema não disponibiliza download dos arquivos PDF/ePub |
+| RF10 | Sessão de leitura | O sistema cria, mantém (heartbeat), expira e encerra sessões de leitura |
+| RF11 | Acesso simultâneo | O sistema limita o número de sessões ativas por conta |
+| RF12 | Área administrativa | Funcionalidades exclusivas para administradores, incluindo consulta e encerramento de sessões |
+| RF13 | Pagamento | Fluxo de contratação com dados fictícios ou gateway apropriado |
 
 ### Não funcionais
 
@@ -344,6 +399,9 @@ Tecnologias adicionais poderão ser incluídas conforme a arquitetura definitiva
 | RNF04 | Usabilidade | Fluxos simples e compreensíveis |
 | RNF05 | Manutenibilidade | Código organizado para facilitar futuras alterações |
 | RNF06 | Versionamento | Desenvolvimento com **Git** e **GitHub** |
+| RNF07 | Proteção de conteúdo | Arquivos originais em armazenamento privado, entregues por partes e com marca d'água |
+| RNF08 | Desempenho de leitura | A página solicitada deve ser exibida em tempo aceitável (meta a definir com a equipe) |
+| RNF09 | Concorrência | O controle de sessões deve funcionar corretamente com vários acessos ao mesmo tempo |
 
 ---
 
@@ -356,13 +414,15 @@ BibliotecaVirtual/
 │   ├── service/
 │   ├── repository/
 │   ├── controller/
+│   ├── index.html        (protótipo da interface)
+│   ├── style.css         (estilos do protótipo)
 │   └── Main.java
 ├── database/
 │   └── schema.sql
 ├── docs/
 │   ├── requisitos.md
 │   └── diagramas/
-├── tests/
+├── testes/
 ├── .gitignore
 ├── LICENSE
 ├── README.md
@@ -401,9 +461,28 @@ main
  ├── feature/cadastro-usuarios
  ├── feature/catalogo-livros
  ├── feature/planos
- ├── feature/emprestimos
+ ├── feature/leitor-digital
+ ├── feature/sessoes-leitura
  └── feature/painel-admin
 ```
+
+---
+
+## 🧭 Próximos passos de desenvolvimento
+
+1. **Modelagem:** desenhar o diagrama de classes (`Usuario`, `Livro`, `Plano`, `SessaoLeitura`) e definir os estados da sessão.
+2. **Decisões em aberto (a definir em equipe):**
+   - Limite padrão de sessões simultâneas (sugestão: 2) e se ele varia por plano;
+   - Tempo de inatividade para expirar a sessão (sugestão: 15 min);
+   - Política ao atingir o limite: recusar a nova sessão ou substituir a mais antiga;
+   - Formatos suportados na primeira versão (sugestão: começar apenas com PDF).
+3. **Banco de dados:** criar o `schema.sql` com as tabelas já sem `Emprestimo` e `Multa`.
+4. **Base do sistema:** cadastro de usuários, autenticação e catálogo de livros.
+5. **Planos:** contratação simulada e validação de vencimento.
+6. **Leitura protegida:** serviço que entrega páginas por sessão, com marca d'água e sem rota de download.
+7. **Sessões:** criação, heartbeat, expiração e limite de acessos simultâneos.
+8. **Painel administrativo:** gestão de livros, usuários, planos e sessões.
+9. **Testes e defesa:** testes automatizados das regras `RN01` a `RN14` e preparação da apresentação.
 
 ---
 
@@ -428,6 +507,7 @@ Desenvolvido como parte da avaliação **A3** da disciplina **Programação e Al
 
 🚧 **Em desenvolvimento**
 
+- [x] definição das regras de negócio
 - [ ] Estrutura inicial do projeto
 - [ ] Modelagem das entidades
 - [ ] Banco de dados
@@ -435,8 +515,9 @@ Desenvolvido como parte da avaliação **A3** da disciplina **Programação e Al
 - [ ] Cadastro de livros e catálogo
 - [ ] Sistema de planos e validação
 - [ ] Sistema de pagamento
+- [ ] Leitor digital protegido (Web Viewer)
+- [ ] Controle de sessões de leitura e acessos simultâneos
 - [ ] Painel administrativo
-- [ ] Empréstimos, devoluções e cálculo de multas
 - [ ] Testes
 - [ ] Documentação
 - [ ] Apresentação final
