@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIBLIOTECH — Biblioteca Digital</title>
+
+  <!-- Fontes do Google: DM Sans (texto) e Fraunces (títulos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= CABEÇALHO ================= -->
+  <header class="header">
+    <div class="container header__inner">
+
+      <a href="#inicio" class="brand" aria-label="Ir para o início">
+        <span class="brand__icon">📖</span>
+        <span class="brand__name">BIBLIOTECH</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#categorias">Tags</a>
+        <a href="#livros">Livros</a>
+        <a href="#recomendados">Recomendados</a>
+        <a href="#populares">Top</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="social-link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="social-link" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a class="btn btn--gold" href="#login">Login</a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section id="inicio" class="hero">
+      <div class="container hero__inner">
+
+        <div class="hero__text">
+          <p class="kicker">Conhecimento conectado</p>
+          <h1 class="hero__title">Toda grande descoberta começa em uma página.</h1>
+          <p class="hero__description">
+            Explore histórias, ideias e mundos inteiros na sua biblioteca digital feita para leitores curiosos.
+          </p>
+
+          <!-- Formulário de busca (ainda sem funcionalidade) -->
+          <form class="search" action="#" method="get">
+            <span class="search__icon" aria-hidden="true">🔎</span>
+            <label for="book-search" class="visually-hidden">Pesquisar livros</label>
+            <input id="book-search" class="search__input" type="search" name="q" placeholder="Busque por título, autor ou categoria">
+            <button type="submit" class="btn btn--gold">Buscar</button>
+          </form>
+        </div>
+
+        <div class="hero__art">
+          <div class="hero__frame">
+            <!-- Troque o src pela imagem do seu projeto (ex: images/hero.jpg) -->
+            <img class="hero__image"
+                 src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 alt="Estantes cheias de livros">
+            <div class="hero__caption">Leitura, tecnologia e imaginação</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= LIVROS: SUGESTÕES + LATERAL ================= -->
+    <section id="livros" class="books">
+      <div class="container books__layout">
+
+        <!-- Sugestões da semana -->
+        <section id="recomendados" aria-labelledby="suggestions-title">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Curadoria BIBLIOTECH</p>
+              <h2 id="suggestions-title" class="section-title">Sugestão da semana</h2>
+            </div>
+            <span class="badge">03 CURADORIAS</span>
+          </div>
+
+          <div class="featured-list">
+
+            <article class="book-card featured">
+              <span class="featured__number">01</span>
+              <img class="featured__cover"
+                   src="https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Livro aberto sob iluminação dramática">
+              <div class="featured__body">
+                <div class="featured__top">
+                  <div>
+                    <h3 class="book-title">A Cidade e as Máquinas</h3>
+                    <p class="book-author">Lia Varella</p>
+                  </div>
+                  <button class="favorite-button" type="button" aria-label="Favoritar A Cidade e as Máquinas">♡</button>
+                </div>
+                <p class="book-description">
+                  Em uma cidade que aprende a sonhar, uma arquivista descobre que cada memória digital tem uma segunda vida.
+                </p>
+                <div class="featured__footer">
+                  <span class="tag">Tecnologia</span>
+                  <!-- Trocar o href pela página de detalhes do livro -->
+                  <a class="btn btn--blue" href="#">Ver detalhes</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="book-card featured">
+              <span class="featured__number">02</span>
+              <img class="featured__cover"
+                   src="https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Estantes de biblioteca com livros coloridos">
+              <div class="featured__body">
+                <div class="featured__top">
+                  <div>
+                    <h3 class="book-title">O Jardim das Horas</h3>
+                    <p class="book-author">Marina Luz</p>
+                  </div>
+                  <button class="favorite-button" type="button" aria-label="Favoritar O Jardim das Horas">♡</button>
+                </div>
+                <p class="book-description">
+                  Um romance delicado sobre dois leitores que trocam anotações nas margens de um livro esquecido.
+                </p>
+                <div class="featured__footer">
+                  <span class="tag">Romance</span>
+                  <a class="btn btn--blue" href="#">Ver detalhes</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="book-card featured">
+              <span class="featured__number">03</span>
+              <img class="featured__cover"
+                   src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Coleção de livros em prateleiras">
+              <div class="featured__body">
+                <div class="featured__top">
+                  <div>
+                    <h3 class="book-title">Mapa do Invisível</h3>
+                    <p class="book-author">Caio Nobre</p>
+                  </div>
+                  <button class="favorite-button" type="button" aria-label="Favoritar Mapa do Invisível">♡</button>
+                </div>
+                <p class="book-description">
+                  Pistas, mapas e uma coleção particular levam uma pesquisadora a um enigma que muda a história de sua cidade.
+                </p>
+                <div class="featured__footer">
+                  <span class="tag">Mistério</span>
+                  <a class="btn btn--blue" href="#">Ver detalhes</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- Coluna lateral: novidades + propaganda -->
+        <aside aria-label="Novidades e destaque">
+
+          <section class="news">
+            <p class="kicker">Atualizações</p>
+            <h2 class="section-title">News</h2>
+            <ul class="news__list">
+              <li>Chegaram novas obras de ficção científica e literatura brasileira.</li>
+              <li>Clube de leitura de outubro abre inscrições nesta semana.</li>
+              <li>Nova coleção digital: clássicos comentados por leitores.</li>
+            </ul>
+          </section>
+
+          <section class="promo">
+            <p class="promo__label">Propaganda</p>
+            <div class="promo__content">
+              <img class="promo__image"
+                   src="https://images.pexels.com/photos/1005012/pexels-photo-1005012.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Livro e luzes decorativas em uma cena de leitura acolhedora">
+              <div>
+                <h2 class="promo__title">Harry Potter e a Ordem da Fênix</h2>
+                <p class="promo__description">Uma jornada de magia, coragem e amizade.</p>
+                <a class="btn btn--gold" href="#">Saiba mais</a>
+              </div>
+            </div>
+          </section>
+
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIS POPULARES ================= -->
+    <section id="populares" class="popular">
+      <div class="container">
+        <p class="kicker">Em alta na estante</p>
+        <h2 class="section-title">Mais populares</h2>
+
+        <div class="popular__grid">
+
+          <article class="book-card popular-card">
+            <img class="popular-card__image"
+                 src="https://images.pexels.com/photos/2908984/pexels-photo-2908984.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 alt="Biblioteca com livros em prateleiras de madeira">
+            <div class="popular-card__body">
+              <span class="popular-card__category">Ficção</span>
+              <h3 class="popular-card__title">Memórias de um Farol</h3>
+              <a class="details-link" href="#">Detalhes</a>
+            </div>
+          </article>
+
+          <article class="book-card popular-card">
+            <img class="popular-card__image"
+                 src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 alt="Pessoa lendo um livro em ambiente interno">
+            <div class="popular-card__body">
+              <span class="popular-card__category">Tecnologia</span>
+              <h3 class="popular-card__title">Código Afetivo</h3>
+              <a class="details-link" href="#">Detalhes</a>
+            </div>
+          </article>
+
+          <article class="book-card popular-card">
+            <img class="popular-card__image"
+                 src="https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 alt="Código em tela escura representando tecnologia moderna">
+            <div class="popular-card__body">
+              <span class="popular-card__category">Fantasia</span>
+              <h3 class="popular-card__title">Órbita Azul</h3>
+              <a class="details-link" href="#">Detalhes</a>
+            </div>
+          </article>
+
+          <article class="book-card popular-card">
+            <img class="popular-card__image"
+                 src="https://images.pexels.com/photos/1765033/pexels-photo-1765033.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 alt="Caderno azul em fundo rosa">
+            <div class="popular-card__body">
+              <span class="popular-card__category">Romance</span>
+              <h3 class="popular-card__title">Cartas para Domingo</h3>
+              <a class="details-link" href="#">Detalhes</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CATEGORIAS ================= -->
+    <section id="categorias" class="categories">
+      <div class="container">
+        <p class="kicker">Navegue por assunto</p>
+        <h2 class="section-title">Categorias</h2>
+
+        <div class="chips">
+          <a class="chip" href="#">Ficção</a>
+          <a class="chip" href="#">Tecnologia</a>
+          <a class="chip" href="#">Romance</a>
+          <a class="chip" href="#">Fantasia</a>
+          <a class="chip" href="#">Mistério</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <p class="footer__brand">BIBLIOTECH</p>
+        <p class="footer__text">Sua próxima leitura está a um clique de distância.</p>
+      </div>
+      <nav class="footer__links" aria-label="Links do rodapé">
+        <a href="#inicio">Sobre</a>
+        <a href="#livros">Acervo</a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ================= LOGIN (abre via :target, sem JavaScript) ================= -->
+  <div id="login" class="modal" role="dialog" aria-modal="true" aria-labelledby="login-title">
+    <div class="modal__panel">
+      <div class="modal__header">
+        <div>
+          <p class="kicker">Acesso BIBLIOTECH</p>
+          <h2 id="login-title" class="section-title">Continue sua jornada leitora</h2>
+        </div>
+        <a class="modal__close" href="#inicio" aria-label="Fechar">✕</a>
+      </div>
+
+      <p class="modal__text">
+        Informe seu e-mail para receber novidades, curadorias e convites da biblioteca.
+      </p>
+
+      <form class="form" action="#" method="post">
+        <label class="form__label" for="access-email">Seu e-mail</label>
+        <input id="access-email" class="form__input" type="email" name="email" required>
+        <button class="btn btn--blue form__submit" type="submit">Quero receber novidades</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

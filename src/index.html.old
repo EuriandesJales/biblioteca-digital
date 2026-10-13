@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="pt-BR"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20261013-04-e17deef","C":{"Abril Fatface":"YACgEZbkUVE,0","Albert Sans":"YAHO2HRfeh4,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo Black":"YACgEZulLoA,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Baloo 2":"YAHO2IcQUcM,0","Barlow Condensed":"YAFdJljEuFc,0","Barlow":"YAFdJsyuOPM,1","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Cinzel":"YACgEeV8bIQ,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Figtree":"YAHO2b-mV7A,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Fredoka":"YACgEZml080,0","Georgia":"YAGzXkO0pEM,0","Hanken Grotesk":"YAHO2VB9G0I,0","Helvetica":"YAFcf7zkXN0,0","IBM Plex Mono":"YAFdJkmvhGI,0","IBM Plex Sans":"YAFdJgT0SHI,0","Impact":"YAFcfnjI7Vk,0","Instrument Sans":"YAHO2bKyaSQ,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Italiana":"YAHO2Toik_w,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Karla":"YAHO2V2NSXM,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Libre Caslon Display":"YAHO2XhLmt0,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Noto Sans JP":"YAFdJiHXlcI,0","Noto Sans KR":"YAGsojZj-RQ,0","Nunito Sans":"YAFdtQJYB9w,1","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Outfit":"YAHO2nVlg14,0","Pacifico":"YADLjORQ1u4,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAHO2gdhi18,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Public Sans":"YAFdJj8NdaU,1","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Sarabun":"YAFdJssSnME,0","Schibsted Grotesk":"YAHO2sWydRk,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Space Grotesk":"YAHO2sjPCSM,0","Space Mono":"YADW1-vpsoc,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0"}}');</script><script src="/_sdk/05db820ba1544614.telemetry_sdk.js" integrity="sha512-a7JzkQDDcioSXpM61nxTfeRW7PcxWQy5+BrhyeTFmQFsXJ+Gncm0y50u7fTA7qOPegFnRgqCfa0mGUOK1yjDWQ=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIBLIOTECH — Biblioteca Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue:#00167A;
+      --paper:#E2D4BB;
+      --gold:#A18000;
+      --cream:#FFEDCD;
+      --black:#000000;
+      --blue-deep:#000d4b;
+      --gold-light:#c6a629;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--black);font-family:"DM Sans",sans-serif}
+    .app-shell{width:100%;overflow:hidden;background:
+      radial-gradient(circle at 82% 6%,rgba(161,128,0,.18),transparent 25%),
+      linear-gradient(180deg,#E2D4BB 0%,#f1e5d1 45%,#E2D4BB 100%)}
+    .brand-word{font-family:"Fraunces",serif;letter-spacing:.08em}
+    .tech-grid{background-image:linear-gradient(rgba(0,22,122,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(0,22,122,.10) 1px,transparent 1px);background-size:32px 32px}
+    .glow{box-shadow:0 0 0 1px rgba(161,128,0,.25),0 18px 50px rgba(0,0,0,.15)}
+    .nav-link{color:var(--cream);transition:color .2s ease}
+    .nav-link:hover,.nav-link:focus-visible{color:#f4cf57}
+    .search-field{background:var(--cream);border:1px solid var(--gold);color:var(--black)}
+    .search-field::placeholder{color:#544a39;opacity:1}
+    .book-card{border:1px solid rgba(0,22,122,.22);background:rgba(255,237,205,.88);box-shadow:0 12px 28px rgba(0,0,0,.09);transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease}
+    .book-card:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 18px 34px rgba(0,22,122,.17)}
+    .cover{aspect-ratio:3/4;object-fit:cover}
+    .category-chip{border:1px solid var(--blue);color:var(--blue);background:rgba(255,237,205,.6);transition:all .2s ease}
+    .category-chip:hover,.category-chip.active{background:var(--gold);border-color:var(--gold);color:var(--black)}
+    .icon-button{border:1px solid rgba(0,22,122,.38);color:var(--blue);transition:all .2s ease}
+    .icon-button:hover,.icon-button.is-favorite{color:var(--cream);border-color:var(--blue);background:var(--blue)}
+    .modal-backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(7px)}
+    .modal-panel{max-height:calc(88 * min(var(--vh, 1vh), 1vh))}
+    .toast{transform:translateY(130%);transition:transform .25s ease}
+    .toast.show{transform:translateY(0)}
+    :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+    .hidden-card{display:none!important}
+    .cream-on-blue{color:var(--cream)}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/570d53629f0b998d.data_sdk.js" type="text/javascript" integrity="sha512-JEN39+V+Nvv9ZZOVS8vNk1iA9ErZJHTdgOw9KzPuMiK7m0I+KPEr/wmTnCFIQVsDjCZgJWfGnFi1IQh2Io2qyA=="></script>
+  <script src="/_sdk/436edb4ed2a23f63.editing_sdk.js" type="text/javascript" integrity="sha512-eoa+TIswQfRWHNxDCBo3gFMWQv4guhxR8ijesoX484mbq829oRd+K0jVEzPbkgmTFRlpvrjhzJyXMMJkxWP4Zw=="></script>
+  <script src="/_sdk/f195026a424c1f85.resizing_sdk.js" type="text/javascript" integrity="sha512-8On4Z+AXh1abEzZJ9Dbn9wOvFg+k1LsAaAzKGQ7LlfgXajZ9xEmZaZ1QVzv0AWhCZtCsEpWSOG9DgLri06TS7A=="></script>
+ </head>
+ <body data-template-id="__page-root" style="background: rgb(226, 212, 187);">
+  <div class="app-shell">
+   <header data-template-id="header-section" class="canva-header sticky top-0 z-30 border-b border-[#A18000]/55 backdrop-blur" style="background: rgb(0, 22, 122);">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 lg:px-8"><a href="#inicio" class="flex min-w-0 items-center gap-3" aria-label="Ir para o início">
+      <div class="grid h-11 w-11 place-items-center rounded-xl border border-[#FFEDCD]/75 bg-[#000000]"><i data-lucide="book-open" class="h-6 w-6 text-[#A18000]"></i>
+      </div><span data-template-id="brand-name" class="canva-text brand-word text-lg font-bold sm:text-xl" style="color: rgb(255, 237, 205); font-weight: 700; font-style: normal; font-size: 16px;">BIBLIOTECH</span> </a>
+     <nav aria-label="Navegação principal" class="hidden items-center gap-5 text-sm font-semibold lg:flex"><a data-template-id="nav-tags" class="canva-link nav-link" href="#categorias" style="color: rgb(255, 237, 205); font-weight: 600; font-style: normal; font-size: 16px;">Tags</a> <a data-template-id="nav-books" class="canva-link nav-link" href="#livros" style="color: rgb(255, 237, 205); font-weight: 600; font-style: normal; font-size: 16px;">Livros</a> <a data-template-id="nav-recommended" class="canva-link nav-link" href="#recomendados" style="color: rgb(255, 237, 205); font-weight: 600; font-style: normal; font-size: 16px;">Recomendados</a> <a data-template-id="nav-top" class="canva-link nav-link" href="#populares" style="color: rgb(255, 237, 205); font-weight: 600; font-style: normal; font-size: 16px;">Top</a>
+     </nav>
+     <div class="flex items-center gap-2"><a class="hidden rounded-lg p-2 text-[#FFEDCD] hover:bg-[#A18000] hover:text-black sm:block" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram" class="h-4 w-4"></i></a> <a class="hidden rounded-lg p-2 text-[#FFEDCD] hover:bg-[#A18000] hover:text-black sm:block" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i data-lucide="youtube" class="h-4 w-4"></i></a> <button data-template-id="login-button" id="login-open" type="button" class="canva-button rounded-lg px-4 py-2 text-sm font-bold" style="background: rgb(161, 128, 0); color: rgb(0, 0, 0); font-weight: 700; font-style: normal; font-size: 16px;">Login</button>
+     </div>
+    </div>
+   </header>
+   <main>
+    <section id="inicio" class="tech-grid relative border-b border-[#00167A]/20">
+     <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 py-14 lg:grid-cols-[1.15fr_.85fr] lg:px-8 lg:py-20">
+      <div class="relative z-10">
+       <p data-template-id="hero-kicker" class="canva-text mb-4 font-semibold uppercase tracking-[.22em]" style="color: rgb(161, 128, 0); font-weight: 700; font-style: normal; font-size: 13px;">Conhecimento conectado</p>
+       <h1 data-template-id="hero-title" class="canva-text max-w-3xl font-['Fraunces'] font-bold" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 32px;">Toda grande descoberta começa em uma página.</h1>
+       <p data-template-id="hero-description" class="canva-text mt-5 max-w-xl leading-7" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 17px; line-height: 1.6;">Explore histórias, ideias e mundos inteiros na sua biblioteca digital feita para leitores curiosos.</p><label data-template-id="search-label" for="book-search" class="canva-text sr-only" style="font-weight: 400; font-style: normal; font-size: 16px;">Pesquisar livros</label>
+       <div class="glow mt-8 flex items-center gap-3 rounded-2xl bg-[#00167A] p-2"><i data-lucide="search" class="ml-3 h-5 w-5 shrink-0 text-[#A18000]"></i> <input id="book-search" class="search-field w-full rounded-xl px-4 py-3.5 text-base outline-none" type="search"> <button data-template-id="search-button" id="search-clear" type="button" class="canva-button hidden shrink-0 rounded-xl px-4 py-3 text-sm font-bold" style="background: rgb(161, 128, 0); color: rgb(0, 0, 0); font-weight: 700; font-style: normal; font-size: 16px;">Limpar</button>
+       </div>
+       <p id="filter-status" class="mt-3 min-h-5 text-sm font-medium text-[#00167A]" aria-live="polite"></p>
+      </div>
+      <div class="relative mx-auto w-full max-w-md">
+       <div class="absolute -inset-7 rounded-full bg-[#A18000]/20 blur-3xl"></div>
+       <div class="relative rounded-[2rem] border border-[#00167A]/25 bg-[#00167A] p-5 shadow-2xl"><img data-template-id="hero-art" loading="lazy" class="canva-image h-80 w-full rounded-[1.45rem] object-cover opacity-90" src="canva://MAHV97FKmps/1" alt="Identidade visual BIBLIOTECH com livro aberto e detalhes geométricos em azul">
+        <div class="absolute inset-x-10 bottom-10 rounded-2xl border border-[#FFEDCD]/50 bg-[#000000]/85 p-4 backdrop-blur">
+         <div class="flex items-center gap-3"><i data-lucide="network" class="h-7 w-7 text-[#A18000]"></i>
+          <p data-template-id="hero-art-caption" class="canva-text font-semibold" style="color: rgb(255, 237, 205); font-weight: 600; font-style: normal; font-size: 16px;">Leitura, tecnologia e imaginação</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="livros" class="mx-auto max-w-7xl px-5 py-14 lg:px-8">
+     <div class="grid gap-10 lg:grid-cols-[1.55fr_.75fr]">
+      <section id="recomendados" aria-labelledby="suggestions-heading">
+       <div class="mb-7 flex items-end justify-between gap-4">
+        <div>
+         <p data-template-id="suggestions-kicker" class="canva-text text-sm font-bold uppercase tracking-[.18em]" style="color: rgb(161, 128, 0); font-weight: 700; font-style: normal; font-size: 13px;">Curadoria BIBLIOTECH</p>
+         <h2 data-template-id="suggestions-title" id="suggestions-heading" class="canva-text mt-2 font-['Fraunces'] font-bold" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 24px;">Sugestão da semana</h2>
+        </div><span class="rounded-full border border-[#00167A]/30 bg-[#FFEDCD]/70 px-3 py-1 text-xs font-bold text-[#00167A]">03 CURADORIAS</span>
+       </div>
+       <div class="space-y-5">
+        <article class="book-card book-item rounded-2xl p-4 sm:flex sm:gap-5" data-title="A Cidade e as Máquinas" data-author="Lia Varella" data-category="Tecnologia" data-description="Em uma cidade que aprende a sonhar, uma arquivista descobre que cada memória digital tem uma segunda vida."><span class="mr-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#A18000] font-['Fraunces'] font-bold text-[#00167A]">01</span> <img data-template-id="suggestion-one-image" loading="lazy" class="canva-image cover mt-4 w-full rounded-xl sm:mt-0 sm:w-28" src="https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Livro aberto sob iluminação dramática">
+         <div class="mt-4 flex-1 sm:mt-0">
+          <div class="flex flex-wrap items-start justify-between gap-3">
+           <div>
+            <h3 data-template-id="suggestion-one-title" class="canva-text font-bold" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 19px;">A Cidade e as Máquinas</h3>
+            <p data-template-id="suggestion-one-author" class="canva-text mt-1 text-sm" style="color: rgb(161, 128, 0); font-weight: 400; font-style: normal; font-size: 16px;">Lia Varella</p>
+           </div><button class="icon-button favorite-button rounded-full p-2" type="button" data-book="A Cidade e as Máquinas" data-category="Tecnologia" aria-label="Favoritar A Cidade e as Máquinas"><i data-lucide="heart" class="h-4 w-4"></i></button>
+          </div>
+          <p data-template-id="suggestion-one-description" class="canva-text mt-3 text-sm leading-6" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 16px;">Em uma cidade que aprende a sonhar, uma arquivista descobre que cada memória digital tem uma segunda vida.</p>
+          <div class="mt-4 flex items-center justify-between gap-3">
+           <span data-template-id="suggestion-one-category" class="canva-tag rounded-full px-3 py-1 text-xs font-bold" style="background: rgb(226, 212, 187); color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 16px;">Tecnologia</span><button data-template-id="suggestion-one-button" class="canva-button detail-button rounded-lg px-4 py-2 text-sm font-bold" type="button" data-book="A Cidade e as Máquinas" data-author="Lia Varella" data-category="Tecnologia" data-description="Em uma cidade que aprende a sonhar, uma arquivista descobre que cada memória digital tem uma segunda vida." style="background: rgb(0, 22, 122); color: rgb(255, 237, 205); font-weight: 700; font-style: normal; font-size: 16px;">Ver detalhes</button>
+          </div>
+         </div>
+        </article>
+        <article class="book-card book-item rounded-2xl p-4 sm:flex sm:gap-5" data-title="O Jardim das Horas" data-author="Marina Luz" data-category="Romance" data-description="Um romance delicado sobre dois leitores que trocam anotações nas margens de um livro esquecido."><span class="mr-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#A18000] font-['Fraunces'] font-bold text-[#00167A]">02</span> <img data-template-id="suggestion-two-image" loading="lazy" class="canva-image cover mt-4 w-full rounded-xl sm:mt-0 sm:w-28" src="https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Estantes de biblioteca com livros coloridos">
+         <div class="mt-4 flex-1 sm:mt-0">
+          <div class="flex flex-wrap items-start justify-between gap-3">
+           <div>
+            <h3 data-template-id="suggestion-two-title" class="canva-text font-bold" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 19px;">O Jardim das Horas</h3>
+            <p data-template-id="suggestion-two-author" class="canva-text mt-1 text-sm" style="color: rgb(161, 128, 0); font-weight: 400; font-style: normal; font-size: 16px;">Marina Luz</p>
+           </div><button class="icon-button favorite-button rounded-full p-2" type="button" data-book="O Jardim das Horas" data-category="Romance" aria-label="Favoritar O Jardim das Horas"><i data-lucide="heart" class="h-4 w-4"></i></button>
+          </div>
+          <p data-template-id="suggestion-two-description" class="canva-text mt-3 text-sm leading-6" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 16px;">Um romance delicado sobre dois leitores que trocam anotações nas margens de um livro esquecido.</p>
+          <div class="mt-4 flex items-center justify-between gap-3">
+           <span data-template-id="suggestion-two-category" class="canva-tag rounded-full px-3 py-1 text-xs font-bold" style="background: rgb(226, 212, 187); color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 16px;">Romance</span><button data-template-id="suggestion-two-button" class="canva-button detail-button rounded-lg px-4 py-2 text-sm font-bold" type="button" data-book="O Jardim das Horas" data-author="Marina Luz" data-category="Romance" data-description="Um romance delicado sobre dois leitores que trocam anotações nas margens de um livro esquecido." style="background: rgb(0, 22, 122); color: rgb(255, 237, 205); font-weight: 700; font-style: normal; font-size: 16px;">Ver detalhes</button>
+          </div>
+         </div>
+        </article>
+        <article class="book-card book-item rounded-2xl p-4 sm:flex sm:gap-5" data-title="Mapa do Invisível" data-author="Caio Nobre" data-category="Mistério" data-description="Pistas, mapas e uma coleção particular levam uma pesquisadora a um enigma que muda a história de sua cidade."><span class="mr-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#A18000] font-['Fraunces'] font-bold text-[#00167A]">03</span> <img data-template-id="suggestion-three-image" loading="lazy" class="canva-image cover mt-4 w-full rounded-xl sm:mt-0 sm:w-28" src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Coleção de livros em prateleiras">
+         <div class="mt-4 flex-1 sm:mt-0">
+          <div class="flex flex-wrap items-start justify-between gap-3">
+           <div>
+            <h3 data-template-id="suggestion-three-title" class="canva-text font-bold" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 19px;">Mapa do Invisível</h3>
+            <p data-template-id="suggestion-three-author" class="canva-text mt-1 text-sm" style="color: rgb(161, 128, 0); font-weight: 400; font-style: normal; font-size: 16px;">Caio Nobre</p>
+           </div><button class="icon-button favorite-button rounded-full p-2" type="button" data-book="Mapa do Invisível" data-category="Mistério" aria-label="Favoritar Mapa do Invisível"><i data-lucide="heart" class="h-4 w-4"></i></button>
+          </div>
+          <p data-template-id="suggestion-three-description" class="canva-text mt-3 text-sm leading-6" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 16px;">Pistas, mapas e uma coleção particular levam uma pesquisadora a um enigma que muda a história de sua cidade.</p>
+          <div class="mt-4 flex items-center justify-between gap-3">
+           <span data-template-id="suggestion-three-category" class="canva-tag rounded-full px-3 py-1 text-xs font-bold" style="background: rgb(226, 212, 187); color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 16px;">Mistério</span><button data-template-id="suggestion-three-button" class="canva-button detail-button rounded-lg px-4 py-2 text-sm font-bold" type="button" data-book="Mapa do Invisível" data-author="Caio Nobre" data-category="Mistério" data-description="Pistas, mapas e uma coleção particular levam uma pesquisadora a um enigma que muda a história de sua cidade." style="background: rgb(0, 22, 122); color: rgb(255, 237, 205); font-weight: 700; font-style: normal; font-size: 16px;">Ver detalhes</button>
+          </div>
+         </div>
+        </article>
+       </div>
+      </section>
+      <aside aria-label="Novidades e destaque">
+       <section data-template-id="news-panel" class="canva-panel rounded-2xl border border-[#00167A]/20 p-6" style="background: rgb(255, 237, 205);">
+        <p data-template-id="news-kicker" class="canva-text text-sm font-bold uppercase tracking-[.18em]" style="color: rgb(161, 128, 0); font-weight: 700; font-style: normal; font-size: 13px;">Atualizações</p>
+        <h2 data-template-id="news-title" class="canva-text mt-2 font-['Fraunces'] font-bold" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 24px;">News</h2>
+        <ul class="mt-5 space-y-4 border-l-2 border-[#A18000] pl-5">
+         <li data-template-id="news-one" class="canva-text text-sm leading-6" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 16px;">Chegaram novas obras de ficção científica e literatura brasileira.</li>
+         <li data-template-id="news-two" class="canva-text text-sm leading-6" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 16px;">Clube de leitura de outubro abre inscrições nesta semana.</li>
+         <li data-template-id="news-three" class="canva-text text-sm leading-6" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 16px;">Nova coleção digital: clássicos comentados por leitores.</li>
+        </ul>
+       </section>
+       <section data-template-id="promo-panel" class="canva-panel relative mt-6 overflow-hidden rounded-2xl p-5" style="background: rgb(0, 22, 122);">
+        <p data-template-id="promo-label" class="canva-text text-xs font-bold uppercase tracking-[.18em]" style="color: rgb(161, 128, 0); font-weight: 700; font-style: normal; font-size: 16px;">Propaganda</p>
+        <div class="mt-4 grid grid-cols-[.8fr_1.2fr] items-center gap-4"><img data-template-id="promo-image" loading="lazy" class="canva-image cover rounded-xl" src="https://images.pexels.com/photos/1005012/pexels-photo-1005012.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Livro e luzes decorativas em uma cena de leitura acolhedora">
+         <div>
+          <h2 data-template-id="promo-title" class="canva-text font-['Fraunces'] font-bold" style="color: rgb(255, 237, 205); font-weight: 700; font-style: normal; font-size: 24px;">Harry Potter e a Ordem da Fênix</h2>
+          <p data-template-id="promo-description" class="canva-text mt-2 text-sm leading-6" style="color: rgb(255, 237, 205); font-weight: 400; font-style: normal; font-size: 16px;">Uma jornada de magia, coragem e amizade.</p><button data-template-id="promo-button" class="canva-button detail-button mt-4 rounded-lg px-4 py-2 text-sm font-bold" type="button" data-book="Harry Potter e a Ordem da Fênix" data-author="J. K. Rowling" data-category="Fantasia" data-description="Uma aventura fantástica em que Harry retorna a Hogwarts e enfrenta mudanças que ameaçam o mundo bruxo." style="background: rgb(161, 128, 0); color: rgb(0, 0, 0); font-weight: 700; font-style: normal; font-size: 16px;">Saiba mais</button>
+         </div>
+        </div>
+       </section>
+      </aside>
+     </div>
+     <div id="empty-state" class="hidden mt-10 rounded-2xl border border-dashed border-[#A18000] bg-[#FFEDCD]/70 px-6 py-10 text-center"><i data-lucide="book-x" class="mx-auto h-8 w-8 text-[#A18000]"></i>
+      <h2 data-template-id="empty-title" class="canva-text mt-4 font-['Fraunces'] font-bold" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 24px;">Nenhum livro encontrado</h2>
+      <p data-template-id="empty-description" class="canva-text mt-2" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 16px;">Tente outro título, autor ou categoria para continuar explorando.</p>
+     </div>
+    </section>
+    <section id="populares" class="border-y border-[#00167A]/20 bg-[#00167A] py-14">
+     <div class="mx-auto max-w-7xl px-5 lg:px-8">
+      <p data-template-id="popular-kicker" class="canva-text text-sm font-bold uppercase tracking-[.18em]" style="color: rgb(161, 128, 0); font-weight: 700; font-style: normal; font-size: 13px;">Em alta na estante</p>
+      <h2 data-template-id="popular-title" class="canva-text mt-2 font-['Fraunces'] font-bold" style="color: rgb(255, 237, 205); font-weight: 700; font-style: normal; font-size: 24px;">Mais populares</h2>
+      <div class="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+       <article class="book-card book-item overflow-hidden rounded-2xl" data-title="Memórias de um Farol" data-author="Ana Faria" data-category="Ficção" data-description="Uma história sobre família, mar e a coragem de recomeçar."><img data-template-id="popular-one-image" loading="lazy" class="canva-image cover w-full" src="https://images.pexels.com/photos/2908984/pexels-photo-2908984.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Biblioteca com livros em prateleiras de madeira">
+        <div class="p-4">
+         <span data-template-id="popular-one-category" class="canva-tag text-xs font-bold" style="color: rgb(161, 128, 0); font-weight: 700; font-style: normal; font-size: 16px;">Ficção</span>
+         <h3 data-template-id="popular-one-title" class="canva-text mt-2 font-bold" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 17px;">Memórias de um Farol</h3><button class="detail-button mt-3 text-sm font-bold text-[#00167A] underline decoration-[#A18000] underline-offset-4" type="button" data-book="Memórias de um Farol" data-author="Ana Faria" data-category="Ficção" data-description="Uma história sobre família, mar e a coragem de recomeçar.">Detalhes</button>
+        </div>
+       </article>
+       <article class="book-card book-item overflow-hidden rounded-2xl" data-title="Código Afetivo" data-author="Rafael Leal" data-category="Tecnologia" data-description="Ensaios acessíveis sobre tecnologia, criatividade e relações humanas."><img data-template-id="popular-two-image" loading="lazy" class="canva-image cover w-full" src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Pessoa lendo um livro em ambiente interno">
+        <div class="p-4">
+         <span data-template-id="popular-two-category" class="canva-tag text-xs font-bold" style="color: rgb(161, 128, 0); font-weight: 700; font-style: normal; font-size: 16px;">Tecnologia</span>
+         <h3 data-template-id="popular-two-title" class="canva-text mt-2 font-bold" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 17px;">Código Afetivo</h3><button class="detail-button mt-3 text-sm font-bold text-[#00167A] underline decoration-[#A18000] underline-offset-4" type="button" data-book="Código Afetivo" data-author="Rafael Leal" data-category="Tecnologia" data-description="Ensaios acessíveis sobre tecnologia, criatividade e relações humanas.">Detalhes</button>
+        </div>
+       </article>
+       <article class="book-card book-item overflow-hidden rounded-2xl" data-title="Órbita Azul" data-author="Nina Campos" data-category="Fantasia" data-description="Uma tripulação encontra uma biblioteca flutuando entre mundos desconhecidos."><img data-template-id="popular-three-image" loading="lazy" class="canva-image cover w-full" src="https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Código em tela escura representando tecnologia moderna">
+        <div class="p-4">
+         <span data-template-id="popular-three-category" class="canva-tag text-xs font-bold" style="color: rgb(161, 128, 0); font-weight: 700; font-style: normal; font-size: 16px;">Fantasia</span>
+         <h3 data-template-id="popular-three-title" class="canva-text mt-2 font-bold" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 17px;">Órbita Azul</h3><button class="detail-button mt-3 text-sm font-bold text-[#00167A] underline decoration-[#A18000] underline-offset-4" type="button" data-book="Órbita Azul" data-author="Nina Campos" data-category="Fantasia" data-description="Uma tripulação encontra uma biblioteca flutuando entre mundos desconhecidos.">Detalhes</button>
+        </div>
+       </article>
+       <article class="book-card book-item overflow-hidden rounded-2xl" data-title="Cartas para Domingo" data-author="Bela Motta" data-category="Romance" data-description="Cartas encontradas por acaso aproximam duas pessoas em tempos diferentes."><img data-template-id="popular-four-image" loading="lazy" class="canva-image cover w-full" src="https://images.pexels.com/photos/1765033/pexels-photo-1765033.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Caderno azul em fundo rosa">
+        <div class="p-4">
+         <span data-template-id="popular-four-category" class="canva-tag text-xs font-bold" style="color: rgb(161, 128, 0); font-weight: 700; font-style: normal; font-size: 16px;">Romance</span>
+         <h3 data-template-id="popular-four-title" class="canva-text mt-2 font-bold" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 17px;">Cartas para Domingo</h3><button class="detail-button mt-3 text-sm font-bold text-[#00167A] underline decoration-[#A18000] underline-offset-4" type="button" data-book="Cartas para Domingo" data-author="Bela Motta" data-category="Romance" data-description="Cartas encontradas por acaso aproximam duas pessoas em tempos diferentes.">Detalhes</button>
+        </div>
+       </article>
+      </div>
+     </div>
+    </section>
+    <section id="categorias" class="mx-auto max-w-7xl px-5 py-14 lg:px-8">
+     <p data-template-id="categories-kicker" class="canva-text text-sm font-bold uppercase tracking-[.18em]" style="color: rgb(161, 128, 0); font-weight: 700; font-style: normal; font-size: 13px;">Navegue por assunto</p>
+     <h2 data-template-id="categories-title" class="canva-text mt-2 font-['Fraunces'] font-bold" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 24px;">Categorias</h2>
+     <div class="mt-6 flex flex-wrap gap-3" role="group" aria-label="Filtrar por categoria"><button data-template-id="category-fiction" class="canva-tag category-chip rounded-full px-5 py-3 text-sm font-bold" type="button" data-category-filter="Ficção" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 16px;">Ficção</button> <button data-template-id="category-tech" class="canva-tag category-chip rounded-full px-5 py-3 text-sm font-bold" type="button" data-category-filter="Tecnologia" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 16px;">Tecnologia</button> <button data-template-id="category-romance" class="canva-tag category-chip rounded-full px-5 py-3 text-sm font-bold" type="button" data-category-filter="Romance" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 16px;">Romance</button> <button data-template-id="category-fantasy" class="canva-tag category-chip rounded-full px-5 py-3 text-sm font-bold" type="button" data-category-filter="Fantasia" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 16px;">Fantasia</button> <button data-template-id="category-mystery" class="canva-tag category-chip rounded-full px-5 py-3 text-sm font-bold" type="button" data-category-filter="Mistério" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 16px;">Mistério</button>
+     </div>
+    </section>
+   </main>
+   <footer data-template-id="footer-section" class="canva-footer border-t border-[#A18000]/50" style="background: rgb(0, 0, 0);">
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-7 px-5 py-9 sm:flex-row sm:items-center lg:px-8">
+     <div>
+      <p data-template-id="footer-brand" class="canva-text brand-word font-bold" style="color: rgb(255, 237, 205); font-weight: 700; font-style: normal; font-size: 16px;">BIBLIOTECH</p>
+      <p data-template-id="footer-copy" class="canva-text mt-2 text-sm" style="color: rgb(226, 212, 187); font-weight: 400; font-style: normal; font-size: 16px;">Sua próxima leitura está a um clique de distância.</p>
+     </div>
+     <div class="flex items-center gap-4 text-sm">
+      <a data-template-id="footer-about" class="canva-link hover:text-[#A18000]" href="#inicio" style="color: rgb(255, 237, 205); font-weight: 400; font-style: normal; font-size: 16px;">Sobre</a><a data-template-id="footer-contact" class="canva-link hover:text-[#A18000]" href="#livros" style="color: rgb(255, 237, 205); font-weight: 400; font-style: normal; font-size: 16px;">Acervo</a><a class="rounded-md text-[#FFEDCD] hover:text-[#A18000]" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram" class="h-5 w-5"></i></a><a class="rounded-md text-[#FFEDCD] hover:text-[#A18000]" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i data-lucide="youtube" class="h-5 w-5"></i></a>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <div id="detail-modal" class="modal-backdrop fixed inset-0 z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="detail-modal-title">
+   <div class="modal-panel w-full max-w-lg overflow-y-auto rounded-2xl border border-[#A18000] bg-[#FFEDCD] p-6 shadow-2xl">
+    <div class="flex items-start justify-between gap-4">
+     <p data-template-id="detail-modal-label" class="canva-text text-xs font-bold uppercase tracking-[.18em]" style="color: rgb(161, 128, 0); font-weight: 700; font-style: normal; font-size: 16px;">Detalhes do livro</p><button class="modal-close rounded-lg p-2 text-[#00167A] hover:bg-[#E2D4BB]" type="button" aria-label="Fechar detalhes"><i data-lucide="x" class="h-5 w-5"></i></button>
+    </div>
+    <h2 id="detail-modal-title" class="mt-4 font-['Fraunces'] text-2xl font-bold text-[#000000]"></h2>
+    <p id="detail-modal-author" class="mt-1 text-[#00167A]"></p><span id="detail-modal-category" class="mt-4 inline-block rounded-full bg-[#E2D4BB] px-3 py-1 text-xs font-bold text-[#00167A]"></span>
+    <p id="detail-modal-description" class="mt-5 leading-7 text-[#000000]"></p>
+   </div>
+  </div>
+  <div id="login-modal" class="modal-backdrop fixed inset-0 z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="login-modal-title">
+   <div class="w-full max-w-md rounded-2xl border border-[#A18000] bg-[#FFEDCD] p-6 shadow-2xl">
+    <div class="flex items-start justify-between gap-4">
+     <div>
+      <p data-template-id="login-modal-kicker" class="canva-text text-xs font-bold uppercase tracking-[.18em]" style="color: rgb(161, 128, 0); font-weight: 700; font-style: normal; font-size: 16px;">Acesso BIBLIOTECH</p>
+      <h2 data-template-id="login-modal-title" id="login-modal-title" class="canva-text mt-2 font-['Fraunces'] font-bold" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 24px;">Continue sua jornada leitora</h2>
+     </div><button class="modal-close rounded-lg p-2 text-[#00167A] hover:bg-[#E2D4BB]" type="button" aria-label="Fechar acesso"><i data-lucide="x" class="h-5 w-5"></i></button>
+    </div>
+    <p data-template-id="login-modal-description" class="canva-text mt-4 text-sm leading-6" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 16px;">Informe seu e-mail para receber novidades, curadorias e convites da biblioteca.</p>
+    <form id="access-form" class="mt-5">
+     <label data-template-id="access-email-label" class="canva-text mb-2 block text-sm font-bold" for="access-email" style="color: rgb(0, 22, 122); font-weight: 700; font-style: normal; font-size: 16px;">Seu e-mail</label><input id="access-email" class="w-full rounded-xl border border-[#00167A]/45 bg-[#FFF8E8] px-4 py-3 text-[#000000] outline-none" type="email" required=""><button data-template-id="access-submit" class="canva-button mt-4 w-full rounded-xl px-4 py-3 font-bold" type="submit" style="background: rgb(0, 22, 122); color: rgb(255, 237, 205); font-weight: 700; font-style: normal; font-size: 16px;">Quero receber novidades</button>
+     <p id="access-message" class="mt-3 min-h-5 text-sm font-medium text-[#00167A]" aria-live="polite"></p>
+    </form>
+   </div>
+  </div>
+  <div id="toast" class="toast fixed bottom-5 right-5 z-[60] rounded-xl border border-[#A18000] bg-[#000000] px-4 py-3 text-sm font-semibold text-[#FFEDCD] shadow-xl" aria-live="polite"></div>
+  <script>
+    let backendRecords = [];
+    let initialLoadTimer;
+    let activeCategory = "";
+    const toast = document.getElementById("toast");
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2800);
+    }
+
+    function isFavorite(title) {
+      return backendRecords.some(record => record.book_title === title && record.book_title !== "__preference__");
+    }
+
+    function updateFavoriteUI() {
+      document.querySelectorAll(".favorite-button").forEach(button => {
+        const active = isFavorite(button.dataset.book);
+        button.classList.toggle("is-favorite", active);
+        button.setAttribute("aria-pressed", String(active));
+      });
+    }
+
+    function filterBooks() {
+      const query = document.getElementById("book-search").value.trim().toLowerCase();
+      let count = 0;
+      document.querySelectorAll(".book-item").forEach(card => {
+        const haystack = [card.dataset.title, card.dataset.author, card.dataset.category].join(" ").toLowerCase();
+        const matched = (!query || haystack.includes(query)) && (!activeCategory || card.dataset.category === activeCategory);
+        card.classList.toggle("hidden-card", !matched);
+        if (matched) count++;
+      });
+      document.getElementById("empty-state").classList.toggle("hidden", count !== 0);
+      document.getElementById("filter-status").textContent = (query || activeCategory) ? `${count} livro${count === 1 ? "" : "s"} encontrado${count === 1 ? "" : "s"}.` : "";
+      document.getElementById("search-clear").classList.toggle("hidden", !query);
+    }
+
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closeModal(modal) {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    const handler = {
+      onDataChanged(data) {
+        clearTimeout(initialLoadTimer);
+        backendRecords = data;
+        const preference = data.find(record => record.book_title === "__preference__");
+        if (preference) activeCategory = preference.category || "";
+        document.querySelectorAll("[data-category-filter]").forEach(button => button.classList.toggle("active", button.dataset.categoryFilter === activeCategory));
+        updateFavoriteUI();
+        filterBooks();
+      }
+    };
+
+    async function initializeDataSdk() {
+      clearTimeout(initialLoadTimer);
+      initialLoadTimer = setTimeout(() => showToast("Não foi possível carregar suas preferências. Tente novamente mais tarde."), 8000);
+      const initResult = await window.dataSdk.init(handler);
+      if (!initResult.isOk) {
+        clearTimeout(initialLoadTimer);
+        showToast("Não foi possível iniciar suas preferências salvas.");
+      }
+    }
+
+    async function toggleFavorite(button) {
+      const existing = backendRecords.find(record => record.book_title === button.dataset.book);
+      button.disabled = true;
+      try {
+        const result = existing
+          ? await window.dataSdk.delete(existing)
+          : await window.dataSdk.create({ book_title: button.dataset.book, category: button.dataset.category, favorited_at: new Date().toISOString() });
+        if (!result.isOk) showToast("Não foi possível confirmar esta alteração. Atualize antes de tentar novamente.");
+        else showToast(existing ? "Livro removido dos favoritos." : "Livro salvo nos favoritos.");
+      } finally {
+        button.disabled = false;
+      }
+    }
+
+    async function saveCategoryPreference(category) {
+      const current = backendRecords.find(record => record.book_title === "__preference__");
+      const record = { book_title: "__preference__", category, favorited_at: new Date().toISOString() };
+      const result = current ? await window.dataSdk.update({ ...current, ...record }) : await window.dataSdk.create(record);
+      if (!result.isOk) showToast("Não foi possível salvar sua preferência de categoria.");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      initializeDataSdk();
+
+      document.getElementById("book-search").addEventListener("input", filterBooks);
+      document.getElementById("search-clear").addEventListener("click", () => {
+        document.getElementById("book-search").value = "";
+        filterBooks();
+        document.getElementById("book-search").focus();
+      });
+
+      document.querySelectorAll(".detail-button").forEach(button => button.addEventListener("click", () => {
+        document.getElementById("detail-modal-title").textContent = button.dataset.book;
+        document.getElementById("detail-modal-author").textContent = `por ${button.dataset.author}`;
+        document.getElementById("detail-modal-category").textContent = button.dataset.category;
+        document.getElementById("detail-modal-description").textContent = button.dataset.description;
+        openModal("detail-modal");
+      }));
+
+      document.querySelectorAll(".favorite-button").forEach(button => button.addEventListener("click", () => toggleFavorite(button)));
+
+      document.querySelectorAll("[data-category-filter]").forEach(button => button.addEventListener("click", async () => {
+        const category = button.dataset.categoryFilter;
+        activeCategory = activeCategory === category ? "" : category;
+        document.querySelectorAll("[data-category-filter]").forEach(item => item.classList.toggle("active", item.dataset.categoryFilter === activeCategory));
+        filterBooks();
+        await saveCategoryPreference(activeCategory);
+      }));
+
+      document.getElementById("login-open").addEventListener("click", () => openModal("login-modal"));
+      document.querySelectorAll(".modal-close").forEach(button => button.addEventListener("click", () => closeModal(button.closest(".modal-backdrop"))));
+      document.querySelectorAll(".modal-backdrop").forEach(modal => modal.addEventListener("click", event => {
+        if (event.target === modal) closeModal(modal);
+      }));
+      document.addEventListener("keydown", event => {
+        if (event.key === "Escape") document.querySelectorAll(".modal-backdrop.flex").forEach(closeModal);
+      });
+
+      document.getElementById("access-form").addEventListener("submit", event => {
+        event.preventDefault();
+        document.getElementById("access-message").textContent = "Recebemos seu e-mail. Em breve você receberá novidades da BIBLIOTECH.";
+        event.currentTarget.reset();
+      });
+    });
+  </script>
+ 
+</body></html>
